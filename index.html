@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>Karen Lin</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@400&display=swap">
+  <style>
+    :root {
+      --font-heading: "Playfair Display", Georgia, serif;
+      --font-body: Inter, Arial, sans-serif;
+      --font-index: ui-monospace, "Courier New", monospace;
+      --color-background: #FFFFFF;
+      --color-text: #292823;
+      --color-accent: #D5FF19;
+      --container-width: 1280px;
+      --transition-base: 250ms ease;
+    }
+
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; color: var(--color-text); background: var(--color-background); font: 14px/1.45 var(--font-body); }
+    body:has(dialog[open]) { overflow: hidden; }
+    button { font: inherit; cursor: pointer; }
+    button, a { color: inherit; }
+    :focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+    .landing:focus, .index:focus { outline: none; }
+    .landing { min-height: 100svh; display: grid; place-items: center; padding: 20px; }
+    .landing h1 { margin: 0; font: 400 clamp(3.5rem, 13vw, 11rem)/1.1 var(--font-heading); letter-spacing: -.075em; }
+    .landing a { text-decoration: none; transition: color var(--transition-base); }
+    .landing a:hover { color: var(--color-accent); }
+    .index { min-height: 100svh; animation: arrive var(--transition-base) both; }
+    .index-header {
+      position: sticky; top: 0; z-index: 1; display: grid;
+      align-items: center;
+      min-height: 60px; padding: 0 clamp(16px, 3vw, 48px);
+      background: var(--color-background);
+      text-transform: uppercase; font: 12px/1.4 var(--font-index);
+    }
+    .index-header a { justify-self: start; padding: 12px 0; text-decoration: none; }
+    .index-header a:hover { color: var(--color-accent); text-decoration: underline; }
+    .image-field { overflow: clip; }
+    .grid {
+      list-style: none; margin: 0 auto; max-width: var(--container-width);
+      padding: clamp(45px, 7vw, 96px) clamp(22px, 6vw, 80px) 96px;
+      display: grid; grid-template-columns: repeat(5,minmax(0,1fr));
+      column-gap: clamp(24px, 6vw, 86px); row-gap: clamp(40px, 7vw, 96px);
+      align-items: start;
+    }
+    .grid li:nth-child(even) { margin-top: clamp(24px, 5.5vw, 70px); }
+    @media (min-width: 850px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+      .grid {
+        transform: translate(var(--field-x, 0px), var(--field-y, 0px));
+        transition: transform 420ms cubic-bezier(.16, 1, .3, 1);
+      }
+      .grid:has(:focus-visible) { transform: none; }
+    }
+    .tile {
+      appearance: none; display: grid; gap: 9px; width: 100%; padding: 0; border: 0;
+      background: transparent; text-align: left; text-decoration: none;
+    }
+    .tile img {
+      width: 100%; aspect-ratio: 1; object-fit: cover; display: block;
+    }
+    .tile:hover { color: var(--color-accent); }
+    @media (max-width: 850px) { .grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+    @media (max-width: 540px) {
+      .grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .index-header { font-size: 11px; }
+    }
+    dialog {
+      position: fixed; inset: 0; width: 100%; height: 100dvh;
+      max-width: none; max-height: none; margin: 0; border: 0;
+      padding: 0; color: var(--color-text); background: var(--color-background);
+    }
+    dialog[open] { display: grid; grid-template-rows: auto minmax(0,1fr) auto; animation: arrive var(--transition-base) both; }
+    .viewer-header, .viewer-controls {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 8px clamp(16px, 3vw, 48px); font: 13px/1.4 var(--font-index);
+    }
+    .tile, .viewer-header h2 { font: 400 12px/1.3 var(--font-index); }
+    .viewer-header h2 { margin: 0; }
+    .viewer-controls { justify-content: center; }
+    .viewer-header button, .viewer-controls button {
+      background: transparent; border: 0; min-width: 48px; min-height: 48px; padding: 8px;
+    }
+    .viewer-header button:hover, .viewer-controls button:hover { text-decoration: underline; }
+    .viewer-count { font-variant-numeric: tabular-nums; text-align: center; min-width: 7ch; }
+    .stage { min-height: 0; padding: 0 clamp(12px, 4vw, 60px); display: grid; grid-template: minmax(0,1fr) / minmax(0,1fr); touch-action: pan-y pinch-zoom; }
+    .stage img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: scale-down; }
+    @keyframes arrive { from { opacity: 0; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  </style>
+  <script src="projects.js" defer></script>
+  <script src="portfolio.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="landing" id="home" aria-label="Home" tabindex="-1">
+      <h1><a href="#index" aria-label="Karen Lin — open work index">Karen Lin</a></h1>
+    </section>
+    <section class="index" id="index" aria-label="Work index" tabindex="-1" hidden>
+      <header class="index-header">
+        <a href="#home">Karen Lin</a>
+      </header>
+      <div class="image-field"><ul class="grid"></ul></div>
+    </section>
+  </main>
+  <dialog aria-labelledby="project-title">
+    <header class="viewer-header">
+      <h2 id="project-title"></h2>
+      <button type="button" id="close" autofocus>Close ×</button>
+    </header>
+    <div class="stage"><img alt="" draggable="false"></div>
+    <footer class="viewer-controls">
+      <button type="button" id="previous" aria-label="Previous image">←</button>
+      <span class="viewer-count" aria-live="polite"></span>
+      <button type="button" id="next" aria-label="Next image">→</button>
+    </footer>
+  </dialog>
+</body>
+</html>
