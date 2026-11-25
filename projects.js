@@ -1,99 +1,99 @@
 const projects = [
   {
     "title": "Okinawa Cycling",
-    "cover": "assets/covers/okinawa.jpg",
+    "cover": "batch-01/assets/covers/okinawa.jpg",
     "slides": [
-      "assets/okinawa/1front-logo.jpg",
-      "assets/okinawa/2slogan-[Recovered].jpg",
-      "assets/okinawa/3t-shirt.jpg"
+      "batch-04/assets/okinawa/1front-logo.jpg",
+      "batch-03/assets/okinawa/2slogan-[Recovered].jpg",
+      "batch-04/assets/okinawa/3t-shirt.jpg"
     ]
   },
   {
     "title": "Peta",
-    "cover": "assets/covers/peta.png",
+    "cover": "batch-01/assets/covers/peta.png",
     "slides": [
-      "assets/peta/1COVER.jpg",
-      "assets/peta/2T-SHIRT.jpg"
+      "batch-05/assets/peta/1COVER.jpg",
+      "batch-02/assets/peta/2T-SHIRT.jpg"
     ]
   },
   {
     "title": "No Guts No Glory",
-    "cover": "assets/covers/no-guts.jpg",
+    "cover": "batch-01/assets/covers/no-guts.jpg",
     "slides": [
-      "assets/no-guts/1Cover.jpg",
-      "assets/no-guts/2LOGO.jpg",
-      "assets/no-guts/3t-shirt.jpg"
+      "batch-04/assets/no-guts/1Cover.jpg",
+      "batch-05/assets/no-guts/2LOGO.jpg",
+      "batch-05/assets/no-guts/3t-shirt.jpg"
     ]
   },
   {
     "title": "Century Education",
-    "cover": "assets/covers/century.jpg",
+    "cover": "batch-01/assets/covers/century.jpg",
     "slides": [
-      "assets/century/1Cover.jpg",
-      "assets/century/2DESIGN-GUIDE.jpg",
-      "assets/century/3Business-card.png"
+      "batch-03/assets/century/1Cover.jpg",
+      "batch-04/assets/century/2DESIGN-GUIDE.jpg",
+      "batch-05/assets/century/3Business-card.png"
     ]
   },
   {
     "title": "Wedding Invitation",
-    "cover": "assets/covers/wedding.jpg",
+    "cover": "batch-01/assets/covers/wedding.jpg",
     "slides": [
-      "assets/wedding/Wedding1.png",
-      "assets/wedding/Wedding2.png"
+      "batch-02/assets/wedding/Wedding1.png",
+      "batch-03/assets/wedding/Wedding2.png"
     ]
   },
   {
     "title": "Megan Brown",
-    "cover": "assets/covers/megan-brown.png",
+    "cover": "batch-01/assets/covers/megan-brown.png",
     "slides": [
-      "assets/megan/web 1.jpg",
-      "assets/megan/megan-brown-2-nodistort.jpg"
+      "batch-02/assets/megan/web 1.jpg",
+      "batch-03/assets/megan/megan-brown-2-nodistort.jpg"
     ]
   },
   {
     "title": "Megabox",
-    "cover": "assets/covers/megabox.jpg",
+    "cover": "batch-01/assets/covers/megabox.jpg",
     "slides": [
-      "assets/megabox/1Cover.jpg",
-      "assets/megabox/2_megabox_main.jpg",
-      "assets/megabox/3_megabox_inner.jpg"
+      "batch-05/assets/megabox/1Cover.jpg",
+      "batch-03/assets/megabox/2_megabox_main.jpg",
+      "batch-03/assets/megabox/3_megabox_inner.jpg"
     ]
   },
   {
     "title": "Ocean Park",
-    "cover": "assets/covers/ocean.jpg",
+    "cover": "batch-01/assets/covers/ocean.jpg",
     "slides": [
-      "assets/ocean/1Cover.jpg",
-      "assets/ocean/2index_a.jpg",
-      "assets/ocean/3index_a.jpg",
-      "assets/ocean/4inner.jpg",
-      "assets/ocean/5inner.jpg"
+      "batch-02/assets/ocean/1Cover.jpg",
+      "batch-04/assets/ocean/2index_a.jpg",
+      "batch-02/assets/ocean/3index_a.jpg",
+      "batch-05/assets/ocean/4inner.jpg",
+      "batch-05/assets/ocean/5inner.jpg"
     ]
   },
   {
     "title": "Initial",
-    "cover": "assets/covers/initial.jpg",
+    "cover": "batch-01/assets/covers/initial.jpg",
     "slides": [
-      "assets/initial/1Cover.png",
-      "assets/initial/2.png",
-      "assets/initial/3DM.jpg"
+      "batch-04/assets/initial/1Cover.png",
+      "batch-02/assets/initial/2.png",
+      "batch-02/assets/initial/3DM.jpg"
     ]
   },
   {
     "title": "Illustration",
-    "cover": "assets/covers/illustration.jpg",
+    "cover": "batch-01/assets/covers/illustration.jpg",
     "slides": [
-      "assets/illustration/ill1.jpg",
-      "assets/illustration/ill2_white.png",
-      "assets/illustration/ill3.jpg",
-      "assets/illustration/ill4.jpg",
-      "assets/illustration/5.jpg",
-      "assets/illustration/6.jpg"
+      "batch-03/assets/illustration/ill1.jpg",
+      "batch-02/assets/illustration/ill2_white.png",
+      "batch-04/assets/illustration/ill3.jpg",
+      "batch-05/assets/illustration/ill4.jpg",
+      "batch-02/assets/illustration/5.jpg",
+      "batch-04/assets/illustration/6.jpg"
     ]
   },
   {
     "title": "Photography",
-    "cover": "assets/covers/photography.jpg",
+    "cover": "batch-01/assets/covers/photography.jpg",
     "url": "https://www.flickr.com/photos/90729647@N00/"
   }
 ];
